@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-subtitle>Cordova Background Mode Plugin</ion-card-subtitle>
+        <ion-card-title>Background Mode</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          This is the test section for the Cordova background mode plugin.
+        </p>
+        <ul>
+          <li><a href="https://ionicframework.com/docs/native/background-mode#usage">Ionic Plugin Page</a></li>
+          <li><a href="https://github.com/katzer/cordova-plugin-background-mode">Github Page</a></li>
+        </ul>
+        <ion-button fill="outline" size="small" color="primary" (click)="toggleBackgroundMode()">
+          {{isBackgroundModeEnabled ? 'Disable' : 'Enable'}} Background Mode
+        </ion-button>
+        <ion-button fill="outline" size="small" color="secondary" *ngIf="isBackgroundModeEnabled" (click)="moveToFront()" [disabled]="disableMoveToFront">
+          {{disableMoveToFront ? 'Chill Out' : 'Move To Front'}}
+        </ion-button>
+        <ion-button fill="outline" size="small" color="secondary" *ngIf="isBackgroundModeEnabled" (click)="moveToFront2()" [disabled]="disableMoveToFront">
+          {{disableMoveToFront ? 'Chill Out 2' : 'Move To Front 2'}}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Cordova Power Management Plugin</ion-card-subtitle>
+      <ion-card-title>Power Management</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        This is the test section for the Cordova power management plugin.
+      </p>
+      <ul>
+        <li><a href="https://ionicframework.com/docs/native/power-management#usage">Ionic Plugin Page</a></li>
+        <li><a href="https://github.com/Viras-/cordova-plugin-powermanagement">Github Page</a></li>
+      </ul>
+      <ion-button fill="outline" size="small" color="primary" (click)="toggleWakeLock()">
+        {{isWakeLockActive ? 'Release' : 'Activate'}} Wake Lock
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
